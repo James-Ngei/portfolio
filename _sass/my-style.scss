@@ -1,0 +1,274 @@
+.dl-table {
+  a {
+    @supports ((text-decoration-thickness: initial) and (text-underline-offset: initial)) {
+      text-underline-offset: .8rem;
+    }
+    @supports not ((text-decoration-thickness: initial) and (text-underline-offset: initial)) {
+      padding-bottom: .45rem;
+    }
+  }
+
+  .btn, .gumroad-button  {
+    margin: 1rem 0;
+  }
+}
+
+// Skill Cards Styling
+.skill-card {
+  background: var(--card-bg, #f8f9fa);
+  border: 1px solid var(--card-border, #e9ecef);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+  
+  h4 {
+    color: var(--accent-color, #4fb1ba);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  
+  .skill-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .skill-tag {
+    background: #eaefe9;
+    color: #495057;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: inline-block;
+    transition: all 0.2s ease;
+    
+    &:hover {
+      background: #dee2e6;
+      transform: translateY(-1px);
+    }
+  }
+}
+
+// Dark mode support for skill cards
+@media (prefers-color-scheme: dark) {
+  .skill-card {
+    background: var(--card-bg-dark, #343435);
+    border-color: var(--card-border-dark, #c4c9d1);
+    
+    h4 {
+      color: var(--accent-color-dark, #ffffff);
+    }
+  }
+}
+
+// Project Tabs Styling
+.project-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin: 2rem 0;
+  border-bottom: 2px solid #4a5568;
+  padding-bottom: 1rem;
+}
+
+.tab-button {
+  background: transparent;
+  color: #a0aec0;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 6px 6px 0 0;
+  
+  &:hover {
+    color: #e2e8f0;
+    background: rgba(79, 177, 186, 0.1);
+  }
+  
+  &.active {
+    color: #4fb1ba;
+    background: rgba(79, 177, 186, 0.2);
+    border-bottom: 3px solid #4fb1ba;
+  }
+}
+
+.tab-content {
+  display: none;
+  
+  &.active {
+    display: block;
+  }
+  
+  h2 {
+    color: #4fb1ba;
+    margin: 1rem 0 0.5rem 0;
+    font-size: 1.6rem;
+  }
+  
+  .tab-description {
+    color: #a0aec0;
+    font-style: italic;
+    margin: 0 0 2rem 0;
+    font-size: 1.1rem;
+  }
+}
+
+// Project Showcase Styling - Hydejack Colors
+.project-showcase {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem; /* Increase gap between cards */
+  margin: 2rem 0;
+}
+
+.project-card {
+  background: #2d3748; /* Dark gray like Hydejack main content */
+  border: 1px solid #4a5568; /* Subtle border */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  }
+}
+
+.project-card a {
+  text-decoration: none;
+}
+
+.project-screenshots {
+  width: 100%;
+  height: 300px;
+  background: #4a5568; /* Dark gray background */
+  display: flex;
+  border-bottom: 1px solid #4a5568;
+  overflow: hidden;
+}
+
+.screenshot-left, .screenshot-right {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.5rem; /* Add spacing between images */
+  
+  &:first-child {
+    padding-left: 1rem;
+  }
+  
+  &:last-child {
+    padding-right: 1rem;
+  }
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.project-content {
+  padding: 1.5rem;
+}
+
+.project-content h3 {
+  color: #4fb1ba; /* Hydejack teal accent color */
+  margin: 0 0 0.5rem 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.project-subtitle {
+  color: #a0aec0; /* Light gray like Hydejack */
+  font-style: italic;
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.tech-tag {
+  background: #4a5568; /* Dark gray background */
+  color: #e2e8f0; /* Light text */
+  padding: 0.3rem 0.7rem;
+  border-radius: 16px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.project-description {
+  color: #e2e8f0; /* Light text like Hydejack */
+  line-height: 1.6;
+  margin: 1rem 0;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.project-link {
+  color: #4fb1ba; /* Hydejack teal */
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border: 2px solid #4fb1ba;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background: #4fb1ba;
+    color: white;
+  }
+}
+
+// JavaScript for tab functionality (add this to a separate .js file or in your HTML)
+/*
+document.addEventListener('DOMContentLoaded', function() {
+  const tabButtons = document.querySelectorAll('.tab-button');
+  const tabContents = document.querySelectorAll('.tab-content');
+  
+  tabButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const targetTab = button.getAttribute('data-tab');
+      
+      // Remove active class from all buttons and contents
+      tabButtons.forEach(btn => btn.classList.remove('active'));
+      tabContents.forEach(content => content.classList.remove('active'));
+      
+      // Add active class to clicked button and target content
+      button.classList.add('active');
+      document.getElementById(targetTab).classList.add('active');
+    });
+  });
+});
+*/
+
+

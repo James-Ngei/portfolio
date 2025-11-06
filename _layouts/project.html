@@ -1,0 +1,182 @@
+---
+layout: default
+---
+
+<div class="project-container">
+  <!-- Hero Section -->
+  <div class="project-hero">
+    <div class="project-hero-content">
+      <div class="project-meta">
+        <span class="project-category">{{ page.category }}</span>
+        <span class="project-status status-{{ page.status | downcase }}">{{ page.status }}</span>
+      </div>
+      
+      <h1 class="project-title">{{ page.title }}</h1>
+      
+      {% if page.subtitle %}
+      <p class="project-subtitle">{{ page.subtitle }}</p>
+      {% endif %}
+      
+      <div class="project-stats">
+        <div class="stat-item">
+          <span class="stat-label">Duration</span>
+          <span class="stat-value">{{ page.duration }}</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Team Size</span>
+          <span class="stat-value">{{ page.team_size }}</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Client</span>
+          <span class="stat-value">{{ page.client }}</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Date</span>
+          <span class="stat-value">{{ page.date | date: "%B %Y" }}</span>
+        </div>
+      </div>
+      
+      <div class="project-actions">
+        {% if page.demo_url %}
+        <a href="{{ page.demo_url }}" class="btn btn-primary" target="_blank" rel="noopener">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15,3 21,3 21,9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+          View Live Demo
+        </a>
+        {% endif %}
+        
+        {% if page.github_url %}
+        <a href="{{ page.github_url }}" class="btn btn-secondary" target="_blank" rel="noopener">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+          </svg>
+          View Code
+        </a>
+        {% endif %}
+      </div>
+    </div>
+    
+    {% if page.featured_image %}
+    <div class="project-hero-image">
+      <img src="{{ page.featured_image }}" alt="{{ page.title }}" loading="lazy">
+    </div>
+    {% endif %}
+  </div>
+  
+  <!-- Technology Stack -->
+  {% if page.technologies %}
+  <div class="tech-stack-section">
+    <h3>Technology Stack</h3>
+    <div class="tech-stack">
+      {% for tech in page.technologies %}
+      <span class="tech-tag">{{ tech }}</span>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+  
+  <!-- Main Content -->
+  <div class="project-content">
+    <div class="content-wrapper">
+      <article class="project-article">
+        {{ content }}
+      </article>
+      
+      <!-- Project Gallery -->
+      {% if page.gallery %}
+      <section class="project-gallery">
+        <h2>Project Gallery</h2>
+        <div class="gallery-grid">
+          {% for image in page.gallery %}
+          <div class="gallery-item" onclick="openImageModal('{{ image }}', '{{ page.title }}')">
+            <img src="{{ image }}" alt="{{ page.title }} - Gallery Image" loading="lazy">
+            <div class="gallery-overlay">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </section>
+      {% endif %}
+    </div>
+  </div>
+  
+  <!-- Navigation -->
+  <div class="project-navigation">
+    <a href="/projects" class="nav-link back-to-projects">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="15,18 9,12 15,6"></polyline>
+      </svg>
+      Back to Projects
+    </a>
+    
+    <div class="project-nav-actions">
+      {% if page.demo_url %}
+      <a href="{{ page.demo_url }}" class="nav-link" target="_blank" rel="noopener">
+        Live Demo
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+          <polyline points="15,3 21,3 21,9"></polyline>
+          <line x1="10" y1="14" x2="21" y2="3"></line>
+        </svg>
+      </a>
+      {% endif %}
+      
+      {% if page.github_url %}
+      <a href="{{ page.github_url }}" class="nav-link" target="_blank" rel="noopener">
+        Source Code
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+        </svg>
+      </a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<!-- Image Modal -->
+<div id="imageModal" class="image-modal" onclick="closeImageModal()">
+  <div class="modal-content">
+    <span class="modal-close" onclick="closeImageModal()">&times;</span>
+    <img id="modalImage" src="" alt="">
+    <div class="modal-caption">
+      <span id="modalCaption"></span>
+    </div>
+  </div>
+</div>
+
+<script>
+function openImageModal(imageSrc, projectTitle) {
+  const modal = document.getElementById('imageModal');
+  const modalImg = document.getElementById('modalImage');
+  const caption = document.getElementById('modalCaption');
+  
+  modal.style.display = 'block';
+  modalImg.src = imageSrc;
+  caption.textContent = projectTitle + ' - Project Gallery';
+  
+  // Prevent body scroll when modal is open
+  document.body.style.overflow = 'hidden';
+}
+
+function closeImageModal() {
+  const modal = document.getElementById('imageModal');
+  modal.style.display = 'none';
+  
+  // Restore body scroll
+  document.body.style.overflow = 'auto';
+}
+
+// Close modal on escape key
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') {
+    closeImageModal();
+  }
+});
+</script>
