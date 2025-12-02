@@ -13,20 +13,18 @@ hide_description: true
 
 <div class="hero-section">
   <h2 class="hero-title">Intelligent Geospatial Systems</h2>
-  <p class="hero-subtitle">From spatial data to autonomous decisions - complete AI solutions that understand geography and act intelligently</p>
+  <p class="hero-subtitle">Turning spatial data into intelligent, autonomous systems that make real-world decisions.</p>
 </div>
 
 <div class="project-tabs">
-  <button class="tab-button active" data-tab="ai-solutions">🚀 AI-Powered Solutions</button>
-  <button class="tab-button" data-tab="ai-agents">🤖 AI Agents</button>
-  <button class="tab-button" data-tab="ml-engineering">🧠 ML Engineering</button>
-  <button class="tab-button" data-tab="geospatial">🗺️ Geospatial Intelligence</button>
-  <button class="tab-button" data-tab="fullstack">💻 Full-Stack Development</button>
+  <button class="tab-button active" data-tab="geospatial-intel">🗺️ Geospatial Intelligence</button>
+  <button class="tab-button" data-tab="geoai-automation">🧠 GeoAI & Automation</button>
+  <button class="tab-button" data-tab="geospatial-systems">💻 Geospatial Systems</button>
 </div>
 
-<div class="tab-content active" id="ai-solutions">
-  <h2>AI-Powered Solutions</h2>
-  <p class="tab-description">End-to-end intelligent systems that combine geospatial analysis, machine learning, and autonomous decision-making.</p>
+<div class="tab-content active" id="geospatial-intel">
+  <h2>Geospatial Intelligence</h2>
+  <p class="tab-description">Advanced spatial data analysis, modeling, and visualization.</p>
   
   <div class="project-showcase">
   

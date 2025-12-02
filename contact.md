@@ -2,7 +2,7 @@
   <div class="contact-hero">
     <div class="contact-hero-content">
       <h1 class="contact-title">Let's Build Something Amazing</h1>
-      <p class="contact-subtitle">Ready to create intelligent geospatial systems? Let's discuss your next AI project.</p>
+      <p class="contact-subtitle">Ready to create intelligent geospatial systems? Let's discuss your next project.</p>
     </div>
   </div>
 
@@ -64,7 +64,7 @@
   <div class="collaboration-section">
     <div class="collaboration-content">
       <h2>What I Can Help With</h2>
-      <p>Specialized in building production-ready AI systems with spatial intelligence.</p>
+      <p>Specialized in building production-grade GIS and GeoAI systems.</p>
       
       <div class="collaboration-grid">
         <div class="collaboration-item">
@@ -75,7 +75,7 @@
               <path d="M2 12l10 5 10-5"></path>
             </svg>
           </div>
-          <h4>AI Agent Development</h4>
+          <h4>GeoAI Development</h4>
           <p>Conversational AI systems that understand spatial context and automate complex workflows</p>
         </div>
 
@@ -87,7 +87,7 @@
             </svg>
           </div>
           <h4>Geospatial ML Systems</h4>
-          <p>Computer vision for satellite imagery, location analytics, and spatial prediction models</p>
+          <p>Computer vision for satellite and aerial imagery, location analytics, and spatial prediction models</p>
         </div>
 
         <div class="collaboration-item">
@@ -98,7 +98,7 @@
               <line x1="12" y1="17" x2="12" y2="21"></line>
             </svg>
           </div>
-          <h4>Full-Stack AI Applications</h4>
+          <h4>Full-Stack GIS Applications</h4>
           <p>End-to-end platforms combining intelligent backends with intuitive user interfaces</p>
         </div>
 
@@ -109,7 +109,7 @@
             </svg>
           </div>
           <h4>Technical Consulting</h4>
-          <p>AI strategy, architecture planning, and technology implementation guidance</p>
+          <p>Architecture design, software engineering strategy, and technology implementation guidance.</p>
         </div>
       </div>
 
@@ -132,26 +132,25 @@
       <div class="status-indicator"></div>
       <span class="status-text">Available for new projects</span>
     </div>
-    <p class="availability-intro">Accepting new AI and geospatial projects. Next available start: <strong>September 15th, 2025</strong></p>
     
     <div class="availability-details">
       <div class="availability-item">
         <h4>Project Focus Areas</h4>
         <ul>
-          <li>AI agent development</li>
-          <li>Geospatial ML applications</li>
-          <li>Computer vision systems</li>
-          <li>Full-stack AI platforms</li>
+          <li>Geospatial Intelligence & Analytics</li>
+          <li>GeoAI & Automation</li>
+          <li>Intelligent Mapping Applications</li>
+          <li>Spatial Data Infrastructure (SDI)</li>
         </ul>
       </div>
       
       <div class="availability-item">
         <h4>Engagement Types</h4>
         <ul>
-          <li>MVP development (4-8 weeks)</li>
-          <li>Full product build (3-6 months)</li>
+          <li>System Prototyping (4–8 weeks)</li>
+          <li>Full Product Development (3-6 months)</li>
           <li>Technical consulting</li>
-          <li>Team augmentation</li>
+          <li>Collaborative Research & Innovation</li>
         </ul>
       </div>
     </div>

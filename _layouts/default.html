@@ -180,8 +180,23 @@
 
   <!-- Scripts -->
   <script>
-    // Mobile Navigation Toggle
+    // Remove 'Powered by Hydejack' text
     document.addEventListener('DOMContentLoaded', function() {
+      // Find and remove the footer statement
+      const footerStatement = document.querySelector('.footer-statement, [class*="hy-credits"], [class*="powered-by"]');
+      if (footerStatement) {
+        footerStatement.remove();
+      }
+      
+      // Alternative: Remove any element containing 'Hydejack' text
+      const elements = document.querySelectorAll('*');
+      elements.forEach(element => {
+        if (element.textContent && element.textContent.includes('Hydejack')) {
+          element.remove();
+        }
+      });
+      
+      // Mobile Navigation Toggle
       const navToggle = document.getElementById('navToggle');
       const navMenu = document.getElementById('navMenu');
       

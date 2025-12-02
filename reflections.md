@@ -2,14 +2,175 @@
 layout: page
 title: Reflections
 description: >
-  Personal reflections on software engineering, GIS technology, career development,
-  and insights from academic and professional experiences.
+  Personal reflections on life, growth, and the human experience — moments that made me think deeper.
 hide_description: true
 ---
+Personal reflections on life, growth, and the human experience — moments that made me think deeper.
+<style>
+.article-container {
+    margin: 0.5rem 0;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: all 0.2s ease;
+}
+.article-container:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.article-header {
+    background-color: #008080;
+    color: white;
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+.article-header:hover {
+    background-color: #006666;
+}
+.article-title {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+.article-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease-out;
+    background-color: #f8fafa;
+    padding: 0 1rem;
+}
+.article-content-inner {
+    padding: 1rem 0;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #2d3748;
+    max-width: 65ch;
+    margin: 0 auto;
+    text-align: left;
+}
 
-# Reflections
+.article-content-inner p {
+    margin-bottom: 1.2em;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+}
+
+.article-content-inner p:last-child {
+    margin-bottom: 0;
+}
+
+.article-content-inner > p:first-of-type:first-letter {
+    font-size: 1.8em;
+    font-weight: 600;
+    line-height: 1;
+    margin-right: 4px;
+    float: left;
+    position: relative;
+    top: 0.1em;
+}
+.plus-icon::after {
+    content: '+';
+    font-size: 1.2rem;
+    transition: all 0.2s ease;
+    opacity: 0.8;
+}
+.plus-icon.active::after {
+    content: '-';
+    opacity: 1;
+}
+.article-header:hover .plus-icon::after {
+    opacity: 1;
+}
+</style>
+
+<!--# Reflections -->
 
 <!--author-->
+
+## Articles
+
+<div class="article-container">
+    <div class="article-header" onclick="this.classList.toggle('active'); this.nextElementSibling.style.maxHeight = this.nextElementSibling.style.maxHeight ? null : this.nextElementSibling.scrollHeight + 'px'; this.querySelector('.plus-icon').classList.toggle('active');">
+        <h3 class="article-title">Can we live free of regrets?</h3>
+        <span class="plus-icon"></span>
+    </div>
+    <div class="article-content">
+        <div class="article-content-inner">
+            <!-- Your article content goes here -->
+<p>When we live in regret, we keep paying a debt that might already be settled. Regret is an emotional conditioning—a learned pattern that traps us between what was and what we wish had been.</p>
+
+<p>The mind says it's over using logic, but the heart clings to the script, replaying scenes we cannot rewrite.</p>
+
+<p>Regret operates like a broken record player. When we keep reliving thoughts of the past that we can't, however, do anything about, we invite mental and emotional suffering that becomes self-reinforcing.</p>
+
+<p>The heart, in its attempt to process and protect, holds onto pain as if it were precious cargo.</p>
+
+<p>Is this worth it? The answer seems obvious, yet millions of us continue this daily practice of emotional self-harm.</p>
+
+<p>There's wisdom in acknowledging that mistakes carry consequences—this is how we learn and grow.</p>
+
+<p>But there's a crucial distinction between learning from our errors and imprisoning ourselves in endless loops of "what if" and "if only."</p>
+
+<p>Prolonged regret from unintended mistakes becomes self-sabotage, a form of self-inflicted harm that hijacks the only time we actually possess: the present moment.</p>
+
+<p>Each time we choose self-compassion over self-criticism, present awareness over past-dwelling, and growth over guilt, we weaken regret's hold on us.</p>
+
+<p>We begin to see our mistakes not as permanent stains on our character, but as temporary missteps in an ongoing journey of becoming.</p>
+
+<p>The irony of regret is that it keeps us trapped in the very past we're trying to heal from, while the healing we seek can only happen in the present.</p>
+
+<p>When we finally release ourselves from this emotional prison, we discover something profound: the person who made those mistakes was doing the best they could with the awareness, resources, and circumstances they had at that time.</p>
+
+<p>And that person deserves the same compassion we would offer a friend walking through their darkest hour.</p>
+
+<p>The debt of regret is often one we've created and can therefore forgive. The key lies in recognizing that forgiveness isn't about forgetting—it's about freeing ourselves to fully inhabit the life that's still ours to live.</p>
+        </div>
+    </div>
+</div>
+
+<div class="article-container">
+    <div class="article-header" onclick="this.classList.toggle('active'); this.nextElementSibling.style.maxHeight = this.nextElementSibling.style.maxHeight ? null : this.nextElementSibling.scrollHeight + 'px'; this.querySelector('.plus-icon').classList.toggle('active');">
+        <h3 class="article-title">Maybe heaven is not a place we go...</h3>
+        <span class="plus-icon"></span>
+    </div>
+    <div class="article-content">
+        <div class="article-content-inner">
+            <!-- Your article content goes here -->
+            This is where the content for "Maybe heaven is not a place we go..." will appear when expanded.
+        </div>
+    </div>
+</div>
+
+<div class="article-container">
+    <div class="article-header" onclick="this.classList.toggle('active'); this.nextElementSibling.style.maxHeight = this.nextElementSibling.style.maxHeight ? null : this.nextElementSibling.scrollHeight + 'px'; this.querySelector('.plus-icon').classList.toggle('active');">
+        <h3 class="article-title">I only said that because I was drunk</h3>
+        <span class="plus-icon"></span>
+    </div>
+    <div class="article-content">
+        <div class="article-content-inner">
+            <!-- Your article content goes here -->
+            This is where the content for "I only said that because I was drunk" will appear when expanded.
+        </div>
+    </div>
+</div>
+
+<div class="article-container">
+    <div class="article-header" onclick="this.classList.toggle('active'); this.nextElementSibling.style.maxHeight = this.nextElementSibling.style.maxHeight ? null : this.nextElementSibling.scrollHeight + 'px'; this.querySelector('.plus-icon').classList.toggle('active');">
+        <h3 class="article-title">The paradox of beauty</h3>
+        <span class="plus-icon"></span>
+    </div>
+    <div class="article-content">
+        <div class="article-content-inner">
+            <!-- Your article content goes here -->
+            This is where the content for "The paradox of beauty" will appear when expanded.
+        </div>
+    </div>
+</div>
 
 ## Personal & Professional Insights
 

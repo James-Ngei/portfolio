@@ -36,38 +36,134 @@
     font-weight: 600;
   }
   
-  .skill-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: 1rem;
-  }
-  
-  .skill-tag {
-    background: #eaefe9;
-    color: #495057;
-    padding: 0.4rem 0.8rem;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    display: inline-block;
-    transition: all 0.2s ease;
+  .skill-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     
-    &:hover {
-      background: #dee2e6;
-      transform: translateY(-1px);
+    li {
+      padding: 0.5rem 0;
+      color: var(--text-color);
+      font-size: 0.95rem;
+      border-bottom: 1px solid var(--border-color, #eaecef);
+      transition: all 0.2s ease;
+      
+      &:last-child {
+        border-bottom: none;
+      }
+      
+      &:hover {
+        color: var(--accent-color, #4fb1ba);
+        padding-left: 0.5rem;
+      }
     }
   }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.25rem;
+    margin: 1.5rem 0;
+  }
+
+  .skill-card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    padding: 1.25rem;
+    box-shadow: 0 2px 8px var(--card-shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px var(--card-shadow-hover);
+    }
+    
+    h4 {
+      color: var(--accent-color);
+      margin: 0 0 0.75rem 0;
+      font-size: 1.1rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
+
+  .skill-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    li {
+      padding: 0.3rem 0;
+      color: var(--text-color);
+      font-size: 0.9rem;
+      border-bottom: 1px solid var(--border-color);
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      
+      &::before {
+        content: "•";
+        color: var(--accent-color);
+        margin-right: 0.5rem;
+        font-size: 1.2rem;
+        line-height: 1;
+      }
+      
+      &:last-child {
+        border-bottom: none;
+      }
+      
+      &:hover {
+        color: var(--accent-color);
+        padding-left: 0.25rem;
+      }
+    }
+  }
+}
+
+// Hide 'Powered by Hydejack' text
+body > footer > div > div > div.legal > div.footer-statement {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  width: 0 !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  padding: 0 !important;
+  margin: -1px !important;
 }
 
 // Dark mode support for skill cards
 @media (prefers-color-scheme: dark) {
   .skill-card {
-    background: var(--card-bg-dark, #343435);
-    border-color: var(--card-border-dark, #c4c9d1);
+    background: var(--card-bg-dark, #2d3748);
+    border-color: var(--card-border-dark, #4a5568);
+    color: #e2e8f0;
     
     h4 {
-      color: var(--accent-color-dark, #ffffff);
+      color: var(--accent-color-dark, #63b3ed);
+    }
+    
+    .skill-list {
+      li {
+        color: #e2e8f0;
+        border-bottom-color: #4a5568;
+        
+        &::before {
+          color: var(--accent-color-dark, #63b3ed);
+        }
+        
+        &:hover {
+          color: var(--accent-color-dark, #63b3ed);
+        }
+      }
     }
   }
 }
